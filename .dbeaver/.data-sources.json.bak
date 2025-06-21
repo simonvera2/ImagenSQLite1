@@ -1,0 +1,30 @@
+{
+	"folders": {},
+	"connections": {
+		"h2_embedded-1829a161a2a-dc8e49ad38ad300": {
+			"provider": "h2",
+			"driver": "h2_embedded",
+			"name": "SinFin2",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"database": "C:\\Proyectos NetBeans\\SINFIN2\\SinFin2DB;MV_STORE=TRUE;DATABASE_TO_LOWER=TRUE;CASE_INSENSITIVE_IDENTIFIERS=TRUE;MODE=PostgreSQL;IFEXISTS=TRUE;",
+				"url": "jdbc:h2:C:\\Proyectos NetBeans\\SINFIN2\\SinFin2DB;MV_STORE=TRUE;DATABASE_TO_LOWER=TRUE;CASE_INSENSITIVE_IDENTIFIERS=TRUE;MODE=PostgreSQL;IFEXISTS=TRUE;",
+				"type": "dev",
+				"auth-model": "native",
+				"handlers": {}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}

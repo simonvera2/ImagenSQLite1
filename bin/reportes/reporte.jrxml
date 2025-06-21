@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporte" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="df3ad5d2-2bbd-4eb5-b976-0e1a5af9c160">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ImagenSqlite1 H2"/>
+	<parameter name="nombre" class="java.lang.String">
+		<defaultValueExpression><![CDATA["gatico.jpg"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[SELECT nombre,
+	archivo
+FROM imagen
+WHERE 
+	 imagen.nombre =  $P{nombre}]]>
+	</queryString>
+	<field name="nombre" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="imagen"/>
+	</field>
+	<field name="archivo" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="archivo"/>
+		<property name="com.jaspersoft.studio.field.label" value="archivo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="imagen"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="558" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="13" width="552" height="30" uuid="5ee3ed36-0d94-4f8e-9555-a739980397fe"/>
+				<textElement textAlignment="Center">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="RetainShape" hAlign="Center">
+				<reportElement x="10" y="70" width="552" height="450" uuid="4f7da967-6311-4811-bddf-3ea8708a87a7"/>
+				<imageExpression><![CDATA[$F{archivo}]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
