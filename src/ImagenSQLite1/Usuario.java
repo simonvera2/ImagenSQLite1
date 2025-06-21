@@ -1,20 +1,21 @@
 package ImagenSQLite1;
 
+@SuppressWarnings("serial")
 public class Usuario extends javax.swing.JDialog {
 
     public static String usuario;
     public static String pass;
 
-    @SuppressWarnings("OverridableMethodCallInConstructor")
     public Usuario(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
         this.setLocationRelativeTo(null);
     }
 
-    @SuppressWarnings("unchecked")
+
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    @SuppressWarnings("deprecation")
+	private void initComponents() {
 
         panelDatos = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -29,7 +30,8 @@ public class Usuario extends javax.swing.JDialog {
         setTitle("Datos de Usuario");
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
-            public void windowOpened(java.awt.event.WindowEvent evt) {
+            @Override
+			public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
             }
         });
@@ -40,7 +42,7 @@ public class Usuario extends javax.swing.JDialog {
 
         jLabel2.setText("Contraseña:");
 
-        campoClave.setNextFocusableComponent(botonAceptar);
+		campoClave.setNextFocusableComponent(botonAceptar);
 
         campoUsuario.setNextFocusableComponent(campoClave);
 
@@ -74,21 +76,24 @@ public class Usuario extends javax.swing.JDialog {
 
         botonAceptar.setText("Aceptar");
         botonAceptar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            @Override
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonAceptarActionPerformed(evt);
             }
         });
 
         botonSalir.setText("Salir");
         botonSalir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            @Override
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonSalirActionPerformed(evt);
             }
         });
 
         botonLimpiar.setText("Limpiar");
         botonLimpiar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            @Override
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonLimpiarActionPerformed(evt);
             }
         });
@@ -138,8 +143,8 @@ public class Usuario extends javax.swing.JDialog {
         usuario = campoUsuario.getText();
         pass = "";
         char[] pw = campoClave.getPassword();
-        for (int i = 0; i < pw.length; i++) {
-            pass = pass + pw[i];
+        for (char element : pw) {
+            pass = pass + element;
         }
         dispose();
     }//GEN-LAST:event_botonAceptarActionPerformed
